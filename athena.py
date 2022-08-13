@@ -26,7 +26,6 @@ class Athena():
         queryExecutionId = queryStart['QueryExecutionId']
         time.sleep(4)
 
-        results = []
         rows = []
 
         client.get_query_results(QueryExecutionId=queryStart['QueryExecutionId'])
@@ -45,8 +44,6 @@ class Athena():
         columns_list = []
         for column in columns:
             columns_list.append(column['VarCharValue'])
-
-        print('Creating Dataframe')
 
         dataframe = pd.DataFrame(columns=columns_list)
 
