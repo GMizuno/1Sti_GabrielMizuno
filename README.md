@@ -40,4 +40,10 @@ Também será possível usar Docker para isolar o ambiente e facilar sua manuten
 
 - Gerar análises gráficas dos dados através de consultas no Athena com biblioteca Python boto3.
 
-![Geral](img/top_escola_plus.png)
+![Escola_plus](img/top_escola_plus.png)
+![Estado_plus](img/top_estado_plus.png)
+![Cidade_plus](img/top_cidade_plus.png)
+
+![Cidade_plus](img/medalha_origem_plus.png)
+![Cidade_plus](img/medalha_origem_proporcao_plus.png)
+
