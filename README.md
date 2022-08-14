@@ -34,7 +34,7 @@ Privada
 
 Arquitetura 
 
-![Arquitetura](img/Arquitetura.svg)
+![Arquitetura](img/Arquitetura.png)
 
 Também será possível usar Docker para isolar o ambiente e facilar sua manutenção em caso de problema de infraestrutura.
 
