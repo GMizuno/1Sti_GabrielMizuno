@@ -45,6 +45,7 @@ plt.show()
 
 # 4 -
 
+rcParams['figure.figsize'] = 10, 8
 medalha_origem = result_medal(result, ['medalha', 'origem'])
 medalha_origem['%'] = 100 * medalha_origem['qtd'] / \
                       medalha_origem.groupby(['origem'])['qtd'].\
@@ -56,6 +57,7 @@ plt.xlabel('Medalha')
 plt.savefig('img/medalha_origem_plus.png')
 plt.show()
 
+rcParams['figure.figsize'] = 10, 8
 sns.barplot(x="medalha", y="%", data=medalha_origem, hue='origem')
 plt.ylabel('Propoção')
 plt.xlabel('Medalha')
