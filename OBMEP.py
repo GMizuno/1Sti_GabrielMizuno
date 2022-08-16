@@ -65,7 +65,7 @@ class Obmep():
 
         logging.info(f'Enviando para AWS {self.url}')
         s3.Bucket('1sti-desafio-gabriel-mizuno'). \
-            put_object(Key='data/' + file_name, Body=parquet_buffer.getvalue())
+            put_object(Key='medalhista/' + file_name, Body=parquet_buffer.getvalue())
 
 class Mencao_honrosa():
 
@@ -98,6 +98,8 @@ class Mencao_honrosa():
         else:
             df.loc[:, 'Origem'] = 'Privada'
         df = df.astype({'Posicao': 'int'})
+        df.rename(columns = {"Menção": "Medalha"}, inplace=True)
+        df.replace({'Sim':'Mencao'}, inplace=True)
         return df
 
     def save_parquet_s3(self, aws_key, aws_secret_key):
