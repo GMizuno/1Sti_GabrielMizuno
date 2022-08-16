@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from matplotlib import rcParams
 from util import result_medal
 
-result = Athena(config('access_key_id'), config('secret_access_key'), "SELECT * FROM obmep where medalha <> 'Mencao'").exec_query()
+result = Athena(config('access_key_id'), config('secret_access_key'), "SELECT * FROM obmep where medalha in ('Ouro', 'Prata', 'Bronze')").exec_query()
 
 # 1 - Escola com mais medalhas
 
